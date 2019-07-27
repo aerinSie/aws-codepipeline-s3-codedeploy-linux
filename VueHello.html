@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>unix_time tool</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+  <div class="container bg-dark">
+  <div id="app" class="jumbotron">
+    <h1 class="display-3">{{ message }}</h1>
+    <div class="card">
+      <div class="card-body">
+          <div class="card-text" > now unix time is: {{nowUnixTime}}</div>
+          <div class="card-text"> now unix time is: {{nowTimeString}}</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="computedUnixTime">paste your unixtime</label>
+      <input id="computedUnixTime" class="form-control" v-model="computedValue" placeholder="請輸入unixTime">
+    </div>
+    <div>your time is: {{afterTimeString}}</div>
+    <hr class="my-4">
+    <p v-bind:style="[baseStyles]">{{ author }}  {{codeVersion}}</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
